@@ -1,8 +1,8 @@
 package com.nzlouis.user.test;
 
 import com.nzlouis.SpringdocOpenapiApplication;
-import com.nzlouis.user.model.User;
-import com.nzlouis.user.repository.IUserRepository;
+import com.nzlouis.user.models.User;
+import com.nzlouis.user.repositories.IUserRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
