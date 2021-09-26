@@ -20,22 +20,25 @@ import java.util.List;
 import static org.junit.Assert.assertThat;
 
 
-@SpringBootTest
+@SpringBootTest(classes = SpringdocOpenapiApplication.class)
 @RunWith(SpringRunner.class)
 public class UserControllerTest {
 
     @Autowired
     private IUserRepository userRepository;
 
-    @Before
-    public void setUp() throws Exception {
-        ConfigurableApplicationContext context = SpringApplication.run(SpringdocOpenapiApplication.class);
-        userRepository = context.getBean(IUserRepository.class);
+    @Test
+    @Rollback(false)
+    @Order(1)
+    public void testFindUsers() {
+        List<User> list =  userRepository.findAll();
+
+        Assertions.assertEquals(4, list.size());
     }
 
     @Test
     @Rollback(false)
-    @Order(1)
+    @Order(2)
     public void testCreateUser() {
         String email = "50@gmail.com";
         userRepository.save(new User
@@ -47,7 +50,7 @@ public class UserControllerTest {
 
     @Test
     @Rollback(false)
-    @Order(2)
+    @Order(3)
     public void findUserByEmail() {
         List<User> firstFindAllList =  userRepository.findAll();
         int firstFindAllListNums = firstFindAllList.size();
@@ -59,16 +62,6 @@ public class UserControllerTest {
 
         Assertions.assertEquals(email, user.getEmail());
     }
-
-    @Test
-    @Rollback(false)
-    @Order(3)
-    public void testFindUsers() {
-        List<User> list =  userRepository.findAll();
-
-        Assertions.assertEquals(4, list.size());
-    }
-
 
 
     @Test
