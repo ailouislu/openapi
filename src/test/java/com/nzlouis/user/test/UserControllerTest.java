@@ -1,23 +1,18 @@
 package com.nzlouis.user.test;
 
 import com.nzlouis.SpringdocOpenapiApplication;
-import com.nzlouis.user.repository.IUserRepository;
 import com.nzlouis.user.model.User;
-import org.junit.Before;
+import com.nzlouis.user.repository.IUserRepository;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
-
-import static org.junit.Assert.assertThat;
 
 
 @SpringBootTest(classes = SpringdocOpenapiApplication.class)
