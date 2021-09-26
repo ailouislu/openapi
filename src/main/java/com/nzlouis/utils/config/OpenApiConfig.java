@@ -34,7 +34,7 @@ public class OpenApiConfig {
 	// Group configuration: Users
 	@Bean
 	public GroupedOpenApi userOpenApi() {
-		String[] packagesToscan = {"com.nzlouis.user"};
+		String[] packagesToscan = {"com.nzlouis.users"};
 		return GroupedOpenApi.builder().group("Users").packagesToScan(packagesToscan)
 				.build();
 	}
