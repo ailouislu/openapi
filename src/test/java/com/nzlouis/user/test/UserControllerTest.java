@@ -42,7 +42,7 @@ public class UserControllerTest {
     public void testCreateUser() {
         String email = "50@gmail.com";
         userRepository.save(new User
-                (email, "ACCOUNTING", "Tom", "Smith"));
+                (email, "ACCOUNTING", "Lucy", "Smith"));
         User savedUser = userRepository.findById(email).orElse(new User());
 
         Assertions.assertEquals(savedUser.getEmail(), email);
