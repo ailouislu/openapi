@@ -46,7 +46,7 @@ public class UserControllerTests {
     @Test
     @Rollback(false)
     @Order(3)
-    public void findUserByEmail() {
+    public void testFindUserByEmail() {
         List<User> firstFindAllList =  userRepository.findAll();
         int firstFindAllListNums = firstFindAllList.size();
 
