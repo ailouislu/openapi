@@ -1,11 +1,11 @@
-package com.nzlouis.user.controllers;
+package com.nzlouis.users.controllers;
 
 import java.util.List;
 
 
-import com.nzlouis.user.models.User;
+import com.nzlouis.users.models.User;
 import com.nzlouis.utils.response.R;
-import com.nzlouis.user.repositories.IUserRepository;
+import com.nzlouis.users.repositories.IUserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  *
  */
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 @Tag(name = "default")
 @CrossOrigin("*")
 public class UserController {

@@ -1,4 +1,4 @@
-package com.nzlouis.user.models;
+package com.nzlouis.users.models;
 
 
 import io.swagger.v3.oas.annotations.media.Schema;
