@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
         info = @Info(
                 title = "User Service",
                 version = "0.1.0",
-                description = "A service for creating, retrieving, updating, and deleting users."
+                description = "A service for searching, creating, retrieving, updating, and deleting users."
         		),
         // Request service address configuration, which can be configured for different environments
         servers = {

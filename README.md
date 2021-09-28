@@ -6,3 +6,5 @@ swagger-ui url : http://localhost:8080/doc.html
 Use of technology: Springboot2.3 + Springdoc-openapi 3 + JPA + H2 + Junit4
 
 "# openapi" 
+
+![](src/main/resources/openapi.gif)
